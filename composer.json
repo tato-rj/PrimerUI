@@ -1,0 +1,26 @@
+{
+    "name": "avillar/primer-ui",
+    "description": "Custom UI setup for Laravel projects.",
+    "license": "MIT",
+    "require": {
+        "laravel/ui": "^3.4",
+        "laravel/helpers": "^1.4"
+    },
+    "authors": [
+        {
+            "name": "Arthur Villar",
+            "email": "arthurvillar@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "PrimerUI\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["PrimerUI\\PrimerServiceProvider"]
+        }
+    }
+}
