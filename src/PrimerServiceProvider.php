@@ -23,11 +23,11 @@ class PrimerServiceProvider extends ServiceProvider
             
             $command->table(['Task', 'Description'], 
             [
-                ['npm install && npm run dev', 'Compile your fresh scaffolding'],
                 ['"files": ["support/helpers.php"]', 'Copy this in the autoload section in composer.json'],
-                ['composer dumpautoload', 'Refresh composer classes'],
                 ['App\Providers\BladeServiceProvider::class,', 'Copy this to the list of service providers'],
+                ['composer dumpautoload', 'Refresh composer classes'],
                 ['php artisan view:clear', 'Update view files to enable custom components'],
+                ['npm install && npm run dev', 'Compile your fresh scaffolding']
             ]);
         });
     }
