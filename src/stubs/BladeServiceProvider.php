@@ -1,6 +1,6 @@
 <?php
 
-namespace PrimerUI;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

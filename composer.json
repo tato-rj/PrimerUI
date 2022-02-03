@@ -20,7 +20,10 @@
     },
     "extra": {
         "laravel": {
-            "providers": ["PrimerUI\\PrimerServiceProvider"]
+            "providers": [
+                "PrimerUI\\PrimerServiceProvider",
+                "App\\Providers\\BladeServiceProvider"
+            ]
         }
     }
 }
