@@ -21,7 +21,8 @@ class PrimerServiceProvider extends ServiceProvider
             $command->info('PrimerUI scaffolding installed successfully.');
             $command->comment('Here\'s what you\'ll need to do next:');
             
-            $command->table([
+            $command->table(['Task', 'Description'], 
+            [
                 ['npm install && npm run dev', 'Compile your fresh scaffolding'],
                 ['"files": ["support/helpers.php"]', 'Copy this in the autoload section in composer.json'],
                 ['composer dumpautoload', 'Refresh composer classes'],
