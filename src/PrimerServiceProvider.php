@@ -20,11 +20,11 @@ class PrimerServiceProvider extends ServiceProvider
         UiCommand::macro('primer-ui', function($command) {
             (new Preset)->install();
 
-            $this->info('All finished! Here are the next steps:');
-            $this->info('php artisan ui primer-ui -> Install the ui package');
-            $this->info('npm install & npm run dev -> Install and compile assets');
-            $this->info('"files": ["support/helpers.php"] -> Append this to the autoload section in composer.json');
-            $this->info('composer dumpautoload -> Refresh composer classes');
+            $command->info('All finished! Here are the next steps:');
+            $command->info('php artisan ui primer-ui -> Install the ui package');
+            $command->info('npm install & npm run dev -> Install and compile assets');
+            $command->info('"files": ["support/helpers.php"] -> Append this to the autoload section in composer.json');
+            $command->info('composer dumpautoload -> Refresh composer classes');
         });
     }
 }
