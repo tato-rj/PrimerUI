@@ -18,33 +18,33 @@ class PrimerServiceProvider extends ServiceProvider
         UiCommand::macro('primer-ui', function($command) {
             (new Preset)->install();
 
-            $this->info('PrimerUI scaffolding installed successfully.');
-            $this->comment('Here\'s what you\'ll need to do next:');
+            $command->info('PrimerUI scaffolding installed successfully.');
+            $command->comment('Here\'s what you\'ll need to do next:');
             
-            $this->newLine();
+            $command->newLine();
 
-            $this->warn('npm install && npm run dev');
-            $this->comment('Compile your fresh scaffolding');
+            $command->warn('npm install && npm run dev');
+            $command->comment('Compile your fresh scaffolding');
 
-            $this->newLine();
+            $command->newLine();
 
-            $this->warn('"files": ["support/helpers.php"]');
-            $this->comment('Copy this in the autoload section in composer.json.');
+            $command->warn('"files": ["support/helpers.php"]');
+            $command->comment('Copy this in the autoload section in composer.json.');
 
-            $this->newLine();
+            $command->newLine();
 
-            $this->warn('composer dumpautoload');
-            $this->comment('Refresh composer classes.');
+            $command->warn('composer dumpautoload');
+            $command->comment('Refresh composer classes.');
 
-            $this->newLine();
+            $command->newLine();
 
-            $this->warn('App\Providers\BladeServiceProvider::class,');
-            $this->comment('Copy this to the list of service providers.');
+            $command->warn('App\Providers\BladeServiceProvider::class,');
+            $command->comment('Copy this to the list of service providers.');
 
-            $this->newLine();
+            $command->newLine();
 
-            $this->warn('php artisan view:clear');
-            $this->comment('Update view files to enable custom components.');
+            $command->warn('php artisan view:clear');
+            $command->comment('Update view files to enable custom components.');
         });
     }
 }
