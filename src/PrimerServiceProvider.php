@@ -25,7 +25,6 @@ class PrimerServiceProvider extends ServiceProvider
             
             $command->table(['Task', 'Description'], 
             [
-                ['composer dumpautoload', 'Refresh composer classes'],
                 ['npm install && npm run dev', 'Compile your fresh scaffolding']
             ]);
         });
