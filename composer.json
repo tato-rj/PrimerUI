@@ -21,8 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "PrimerUI\\PrimerServiceProvider",
-                "App\\Providers\\BladeServiceProvider"
+                "PrimerUI\\PrimerServiceProvider"
             ]
         }
     }
