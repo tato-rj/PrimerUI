@@ -1,5 +1,5 @@
 <section>
-  @component('layouts.navbar.horizontal', [
+{{--   @component('layouts.navbar.horizontal', [
     'layout' => 'fixed',
     'classes' => 'border-bottom',
     'background' => 'white',
@@ -11,5 +11,5 @@
       'height' => 4,
       'gap' => 3,
       ])
-  @endcomponent
+  @endcomponent --}}
 </section>

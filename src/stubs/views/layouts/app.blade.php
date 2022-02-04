@@ -18,7 +18,7 @@
         @include('layouts.header')
 
         <div id="page-content">
-            <div class="pt-3 pb-5">
+            <div>
                 @yield('content')
             </div>
         </div>
