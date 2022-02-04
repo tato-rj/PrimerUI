@@ -24,8 +24,6 @@ class Preset extends UiPreset
 		static::helpers();
 
 		static::updateComposer();
-
-		app()->register(\App\Providers\BladeServiceProvider::class);
 	}
 
 	public static function copyStubFile($from, $to)

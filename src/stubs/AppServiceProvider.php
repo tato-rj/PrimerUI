@@ -4,10 +4,10 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class BladeServiceProvider extends ServiceProvider
+class AppServiceProvider extends ServiceProvider
 {
     /**
-     * Register services.
+     * Register any application services.
      *
      * @return void
      */
@@ -17,7 +17,7 @@ class BladeServiceProvider extends ServiceProvider
     }
 
     /**
-     * Bootstrap services.
+     * Bootstrap any application services.
      *
      * @return void
      */

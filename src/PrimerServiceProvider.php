@@ -18,14 +18,14 @@ class PrimerServiceProvider extends ServiceProvider
         UiCommand::macro('primer-ui', function($command) {
             (new Preset)->install();
 
+            \Artisan::call('view:clear');
+
             $command->info('PrimerUI scaffolding installed successfully.');
-            $command->comment('Here\'s what you\'ll need to do next:');
+            $command->comment('Don\'t forget to run the following commands:');
             
             $command->table(['Task', 'Description'], 
             [
-                ['App\Providers\BladeServiceProvider::class,', 'Copy this to the list of service providers'],
                 ['composer dumpautoload', 'Refresh composer classes'],
-                ['php artisan view:clear', 'Update view files to enable custom components'],
                 ['npm install && npm run dev', 'Compile your fresh scaffolding']
             ]);
         });

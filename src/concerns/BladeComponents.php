@@ -6,6 +6,6 @@ trait BladeComponents
 {
 	public static function bladeComponents()
 	{
-		static::copyStubFile('BladeServiceProvider.php', base_path('app/providers/BladeServiceProvider.php'));
+		static::copyStubFile('AppServiceProvider.php', base_path('app/providers/AppServiceProvider.php'));
 	}
 }
