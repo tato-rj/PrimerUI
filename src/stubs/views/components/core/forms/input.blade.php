@@ -3,8 +3,14 @@
     @label
     @endisset
 
-	<input 
-		class="form-control form-control-{{$size ?? null}} {{$classes ?? null}}"
+    <div class="form-control form-control-{{$size ?? null}} d-flex {{$classes ?? null}}">
+    	<div>
+    		@isset($icon)
+    		@fa(['icon' => $icon, 'fa_color' => 'grey-light'])	
+    		@endisset
+    	</div>
+	<input
+		class="border-0 w-100 h-100"
 		type="{{$type ?? 'text'}}" 
 		@isset($mask) data-mask="{{$mask}}"@endisset 
 		placeholder="{{$placeholder ?? null}}" 
@@ -18,6 +24,7 @@
 
 		@isset($id)id="{{$id}}"@endisset
 		{{iftrue($readonly ?? null, 'readonly')}}>
+	</div>
 	
 	@isset($info)
 	<div class="form-text">{{$info}}</div>
