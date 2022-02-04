@@ -6,8 +6,14 @@
     <div>
         @foreach($options as $value => $label)
         <div class="form-check {{iftrue($inline ?? null, 'form-check-inline')}} {{$classes ?? null}}">
-          <input class="form-check-input" name="{{$name}}" type="radio" value="{{$value}}" id="radio-{{$value}}" {{iftrue($readonly ?? null, 'readonly')}}>
-          <label class="form-check-label" for="radio-{{$value}}">{{$label}}</label>
+          <input 
+            class="form-check-input" 
+            name="{{$name}}" 
+            type="radio" 
+            value="{{$value}}" 
+            id="radio-{{$value}}" 
+            {{iftrue($readonly ?? null, 'readonly')}}>
+                <label class="form-check-label" for="radio-{{$value}}">{{$label}}</label>
         </div>
         @endforeach
     </div>

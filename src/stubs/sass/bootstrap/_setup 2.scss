@@ -21,7 +21,6 @@ $colors: prepend($colors, (dark: (white, $dark-color)));
 @import "../components/positions";
 @import "../components/text";
 @import "../components/z-index";
-@import "../components/dimensions";
 
 @import "../elements/switches";
 @import "../elements/badges";

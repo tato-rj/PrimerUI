@@ -5,7 +5,8 @@
 
   <select 
     class="form-select form-select-{{$size ?? null}} {{$classes ?? null}}" 
-    name="{{$name}}" id="{{$id ??null}}" 
+    name="{{$name}}" 
+    @isset($id)id="{{$id}}"@endisset 
     {{iftrue($required ?? null, 'required')}}
     {{iftrue($readonly ?? null, 'readonly')}}>
     

@@ -1,15 +1,21 @@
 @if($message = session('success'))
 @alert([
     'color' => 'green',
-    'message' => '<strong class="mr-2">Success |</strong>' . $message,
+    'headline' => 'Success',
+    'message' => $message,
     'dismissible' => true,
-    'floating' => 'top'])
+    'countdown' => 2,
+    'pos' => 'top',
+    'animation' => ['in' => 'fadeInUp', 'out' => 'fadeOutDown']])
 @endif
 
 @if($message = session('error') ?? $errors->first())
 @alert([
     'color' => 'red',
-    'message' => '<strong class="mr-2">Sorry |</strong>' . $message,
+    'headline' => 'Sorry',
+    'message' => $message,
     'dismissible' => true,
-    'floating' => 'top'])
+    'countdown' => 2,
+    'pos' => 'top',
+    'animation' => ['in' => 'fadeInUp', 'out' => 'fadeOutDown']])
 @endif
