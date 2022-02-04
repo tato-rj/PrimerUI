@@ -4,11 +4,11 @@ namespace PrimerUI;
 
 use Illuminate\Support\Facades\File;
 use Laravel\Ui\Presets\Preset as UiPreset;
-use PrimerUI\Concerns\{Directories, Mix, Packages, Sass, Scripts, Views, Routes, BladeComponents, Helpers};
+use PrimerUI\Concerns\{Directories, Mix, Packages, Sass, Scripts, Views, Routes, BladeComponents, Helpers, Composer};
 
 class Preset extends UiPreset
 {
-	use Directories, Mix, Packages, Sass, Scripts, Views, Routes, BladeComponents, Helpers;
+	use Directories, Mix, Packages, Sass, Scripts, Views, Routes, BladeComponents, Helpers, Composer;
 
 	public static function install()
 	{
@@ -22,6 +22,10 @@ class Preset extends UiPreset
 		static::bladeComponents();
 		static::mix();
 		static::helpers();
+
+		static::updateComposer();
+
+		// app()->register(\App\Providers\BladeServiceProvider::class);
 	}
 
 	public static function copyStubFile($from, $to)
