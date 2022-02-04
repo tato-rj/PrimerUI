@@ -1,4 +1,9 @@
 <option value="{{$value}}" 
-	{{iftrue($selected ?? null, 'selected')}}>
+		@if(old($name) == $value)
+		selected
+		@else
+		{{iftrue($selected ?? null, 'selected')}}
+		@endif
+	>
 	{{$label}}
 </option>

@@ -1,1 +1,1 @@
-<label class="form-label {{$classes ?? null}}"><strong><small>{{$label}}</small></strong></label>
+<label class="form-label {{$classes ?? null}}"><small>{{$label}}</small></label>

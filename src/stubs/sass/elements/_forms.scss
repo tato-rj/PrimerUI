@@ -6,6 +6,7 @@ form {
 	.form-control, .form-select {
 		@extend .rounded;
 		padding: map-get($form, padding-y) map-get($form, padding-x);
+		border-color: #e9ebf0;
 	}
 
 
@@ -22,7 +23,7 @@ form {
 
 		&.form-light {
 			input.form-control:not([readonly]), textarea.form-control:not([readonly]), input.form-check:not([readonly]) {
-				@extend .bg-light;
+				background: map-get($form, background);
 			}
 		}
 	}

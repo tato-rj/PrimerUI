@@ -15,4 +15,6 @@
 	@isset($info)
 	<div class="form-text">{{$info}}</div>
 	@endisset
+
+	@feedback(['input' => $name])
 </div>
