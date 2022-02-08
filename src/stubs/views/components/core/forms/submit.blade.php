@@ -1,1 +1,1 @@
-@btn(['label' => $label, 'type' => 'submit', 'submit' => true])
+@btn(['label' => $label, 'type' => 'submit', 'submit' => true, 'classes' => $classes ?? null])

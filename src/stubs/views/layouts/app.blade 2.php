@@ -9,7 +9,6 @@
         @include('layouts.components.favicon')
         @include('layouts.components.seo')
 
-        <link href="{{ asset('vendor/prism/prism.css') }}" rel="stylesheet">
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         @stack('header')
     </head>
@@ -19,7 +18,7 @@
         @include('layouts.header')
 
         <div id="page-content">
-            <div class="pt-3 pb-5">
+            <div>
                 @yield('content')
             </div>
         </div>
@@ -27,7 +26,6 @@
         @include('layouts.components.alerts')
 
         <script src="{{ mix('js/app.js') }}"></script>
-        <script src="{{ asset('vendor/prism/prism.js') }}"></script>
         
         <script type="text/javascript">
             (new Overlay({
